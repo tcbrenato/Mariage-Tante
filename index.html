@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le mariage de Désiré et Alice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Section Vidéo d'Arrière-Plan avec Photo en Cercle -->
+<section class="bg-video" style="position: relative; overflow: hidden;">
+    <video autoplay muted loop class="video-background">
+        <source src="./Asset/Video hero.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+    <div class="content">
+        <div class="circle-photo">
+            <img src="./Asset/1.jpg" alt="Photo du couple" class="img-fluid">
+        </div>
+        <h2 class="text-center text-white">Bienvenue à tous !</h2>
+        <p class="text-center text-white">Revivez les moments inoubliables du grand jour.</p>
+        <a href="#gallery" class="btn btn-light">Voir la Galerie</a>
+    </div>
+</section>
+
+<!-- CSS pour la section -->
+<style>
+    .bg-video {
+        height: 100vh; /* Hauteur de la section */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .video-background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+
+    .content {
+        position: relative;
+        z-index: 2; /* Pour afficher le contenu au-dessus de la vidéo */
+    }
+
+    .circle-photo {
+        width: 150px; /* Ajuste la taille du cercle */
+        height: 150px; /* Ajuste la taille du cercle */
+        border-radius: 50%; /* Crée un cercle */
+        overflow: hidden;
+        margin: 0 auto 20px; /* Centrer l'image et ajouter de l'espace en bas */
+        border: 5px solid white; /* Bordure blanche autour de l'image */
+    }
+
+    .circle-photo img {
+        width: 100%;
+        height: auto; /* Ajuste l'image à la taille du cercle */
+        display: block; /* Supprime les espaces en bas */
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+</style>
+
+
+    <style>
+        body {
+            padding-top: 56px; /* Ajoute un padding pour compenser la hauteur du header fixe */
+            background-color: #001f3f; /* Bleu nuit */
+            color: white;
+        }
+        .navbar {
+            background-color: #001f3f; /* Bleu nuit */
+        }
+        .navbar .nav-link {
+            color: white;
+        }
+        .navbar .nav-link:hover {
+            background-color: #0023DB; /* Couleur au survol */
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .social-icons a {
+            color: white;
+            margin-left: 10px;
+        }
+        .social-icons a:hover {
+            color: #0023DB; /* Couleur au survol des icônes */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header avec navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Le mariage de Désiré et Alice</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Galerie Photo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#videos">Vidéos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Témoignages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://wa.me/" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+<style>
+    .gallery {
+        background-color: #001f3f; /* Bleu nuit */
+        color: white;
+    }
+    .accordion-button {
+        background-color: #0023DB; /* Couleur des boutons d'accordéon */
+        color: white;
+    }
+    .accordion-button:not(.collapsed) {
+        background-color: #001bb5; /* Couleur des boutons d'accordéon au survol */
+        color: white;
+    }
+    .accordion-body img {
+        border-radius: 10px; /* Coins arrondis pour les images */
+        max-width: 100%;
+        height: auto;
+        margin-top: 15px;
+    }
+</style>
+
+
+
+  <!-- Section Galerie Photo -->
+<section id="gallery" class="gallery py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Galerie Photo</h2>
+        <div class="accordion" id="galleryAccordion">
+            <!-- Album 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Préparatifs
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="./Asset/WhatsApp Image 2024-08-24 à 20.39.26_7b2eb7c7.jpg" class="img-fluid" alt="Préparatifs 1">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="./Asset/WhatsApp Image 2024-08-24 à 20.39.29_03b64468.jpg" class="img-fluid" alt="Préparatifs 2">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="./Asset/WhatsApp Image 2024-08-24 à 20.39.29_f30c78af.jpg" class="img-fluid" alt="Préparatifs 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Album 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Cérémonie
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="./Asset/WhatsApp Image 2024-08-24 à 21.01.11_c907647f.jpg" class="img-fluid" alt="Cérémonie 1">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="./Asset/WhatsApp Image 2024-08-24 à 21.01.12_6324bb8e.jpg" class="img-fluid" alt="Cérémonie 2">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="./Asset/WhatsApp Image 2024-08-24 à 21.01.13_676797ee.jpg" class="img-fluid" alt="Cérémonie 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Album 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Réception
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image3a.jpg" class="img-fluid" alt="Réception 1">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image3b.jpg" class="img-fluid" alt="Réception 2">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image3c.jpg" class="img-fluid" alt="Réception 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Album 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Moments spéciaux
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image4a.jpg" class="img-fluid" alt="Moments spéciaux 1">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image4b.jpg" class="img-fluid" alt="Moments spéciaux 2">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image4c.jpg" class="img-fluid" alt="Moments spéciaux 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Album 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Photobooth
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image5a.jpg" class="img-fluid" alt="Photobooth 1">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image5b.jpg" class="img-fluid" alt="Photobooth 2">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image5c.jpg" class="img-fluid" alt="Photobooth 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Album 6 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Cadeaux et souvenirs
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image6a.jpg" class="img-fluid" alt="Cadeaux 1">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image6b.jpg" class="img-fluid" alt="Cadeaux 2">
+                            </div>
+                            <div class="col-6 col-md-4 mb-3">
+                                <img src="image6c.jpg" class="img-fluid" alt="Cadeaux 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  
+  <section id="videos" class="videos container mt-5">
+    <h2 class="text-center">Vidéos</h2>
+    <div class="row">
+      <div class="col-md-6"><iframe src="./Asset/vide amb22.mp4" frameborder="0" allowfullscreen></iframe></div>
+      <div class="col-md-6"><iframe src="./Asset/video ambiance.mp4" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="full-video-link.mp4" class="btn btn-primary">Voir la vidéo intégrale</a>
+    </div>
+  </section>
+
+  
+  <section id="testimonials" class="testimonials container mt-5">
+    <h2 class="text-center">Témoignages et Messages</h2>
+    <div class="row">
+      <div class="col-md-4"><p>"Félicitations aux mariés !"</p></div>
+      <div class="col-md-4"><p>"Un jour magnifique, merci pour l'invitation !"</p></div>
+      <div class="col-md-4"><p>"Tous mes vœux de bonheur !"</p></div>
+    </div>
+    <form class="mt-4">
+      <div class="mb-3">
+        <label for="message" class="form-label">Laisser un message :</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+  </section>
+
+  <section id="about" class="about container mt-5">
+    <h2 class="text-center">À propos du couple</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra magna nec nisl dignissim, nec facilisis lacus efficitur. Nam a ligula felis.</p>
+    <div class="text-center">
+      <a href="history-video.mp4" class="btn btn-primary">Voir leur histoire</a>
+    </div>
+  </section>
+
+  
+
+  <div class="text-center my-5">
+    <p>Partagez ce site :</p>
+    <a href="#" class="btn btn-primary"><i class="bi bi-facebook"></i> Facebook</a>
+    <a href="#" class="btn btn-info"><i class="bi bi-twitter"></i> Twitter</a>
+    <a href="#" class="btn btn-danger"><i class="bi bi-youtube"></i> YouTube</a>
+  </div>
+
+  
+  <footer class="footer text-center py-4">
+    <p>© 2024 Le mariage de Désiré & Alice. Tous droits réservés
+        
+          
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
